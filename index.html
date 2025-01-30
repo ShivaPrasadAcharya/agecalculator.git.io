@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Age Calculator</h1>
+    <form id="ageForm">
+      <div class="card">
+        <h2>Date of Birth</h2>
+        <div class="input-group">
+          <input type="number" id="birthYear" placeholder="Year (YYYY)" required>
+          <input type="number" id="birthMonth" placeholder="Month (MM)" min="1" max="12" required>
+          <input type="number" id="birthDay" placeholder="Day (DD)" min="1" max="31" required>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Custom Date</h2>
+        <div class="input-group">
+          <input type="number" id="customYear" placeholder="Year (YYYY)" required>
+          <input type="number" id="customMonth" placeholder="Month (MM)" min="1" max="12" required>
+          <input type="number" id="customDay" placeholder="Day (DD)" min="1" max="31" required>
+        </div>
+      </div>
+      <button type="submit" id="calculateBtn">Calculate Age</button>
+    </form>
+    <div id="result" class="card hidden">
+      <h2>Age:</h2>
+      <p id="ageResult"></p>
+    </div>
+    <div id="error" class="card hidden error">
+      <p id="errorMessage"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
